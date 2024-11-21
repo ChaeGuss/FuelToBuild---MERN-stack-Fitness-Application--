@@ -1,0 +1,38 @@
+/* Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3rem 5rem;
+    border-radius: 30px;
+    background-color: #333;
+    color: #fff;
+    width: 55%;
+  }
+  
+.navbar-container {
+  display: flex;
+  justify-content: center; /* Centers the navbar horizontally */
+  align-items: center; 
+}
+
+  .navbar-logo h2 {
+    margin: 0;
+    color: #f0e7e4; /* Set your logo color here */
+  }
+  
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .navbar-links a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .navbar-links a:hover {
+    color: #ff5722;
+  }
+  

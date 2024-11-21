@@ -1,0 +1,66 @@
+/* Container for the homepage */
+.homepage-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden; /* Prevent scrolling */
+  }
+  
+  /* Image styling */
+  .image-container {
+    position: relative;
+    opacity: 0; /* Start hidden */
+    animation: moveDown 2s ease-out forwards; /* Move down animation */
+  }
+  
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* Text styling */
+  .text-container {
+    position: relative;
+    opacity: 0; /* Start hidden */
+    animation: fadeInMoveUp 2s ease-out 1.5s forwards; /* Delayed animation */
+    text-align: center;
+  }
+  
+  .text-container h1 {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  
+  .text-container p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
+  
+  /* Keyframe animation for moving the image down */
+  @keyframes moveDown {
+    0% {
+      opacity: 0;
+      transform: translateY(0); /* Start at center */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(20px); /* Slightly move down */
+    }
+  }
+  
+  /* Keyframe animation for fading in and moving text up */
+  @keyframes fadeInMoveUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px); /* Start slightly below */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); /* Move up to center */
+    }
+  }
+  
