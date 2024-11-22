@@ -22,13 +22,15 @@ const HomePage = () => {
         repeat: -1,
       },
     }).totalProgress(0.5);
+    
 
   }, []);
 
   return (
-    <div>
+    <div className='screen'>
       <Navbar />
       <div className="homepage-container">
+        <div className='landing'>
           <div className="image-container">
             <img
               src={img1} // Replace with the path to your image
@@ -44,63 +46,88 @@ const HomePage = () => {
             <span>Train Smart</span>
           </div>
           <div className="marquee" >
-            <span>Train Smart</span>
+            <span>↩</span>
           </div>
           <div className="marquee" >
             <span>Train Smart</span>
           </div>
           <div className="marquee" >
-            <span>Train Smart</span>
+            <span>↪</span>
           </div>
           <div className="marquee" >
             <span>Train Smart</span>
           </div>
           <div className="marquee" >
-            <span>Train Smart</span>
+            <span>↩</span>
           </div>
           <div className="marquee" >
             <span>Train Smart</span>
           </div>
           <div className="marquee" >
-            <span>Train Smart</span>
+            <span>↪</span>
           </div>
           <div className="marquee" >
             <span>Train Smart</span>
           </div>
           <div className="marquee" >
-            <span>Train Smart</span>
+            <span>↩</span>
           </div>
           <div className="marquee" >
             <span>Train Smart</span>
           </div>
           <div className="marquee" >
-            <span>Train Smart</span>
+            <span>↪</span>
           </div>
           <div className="marquee" >
             <span>Train Smart</span>
           </div>
           <div className="marquee" >
-            <span>Train Smart</span>
+            <span>↩</span>
           </div>
           <div className="marquee" >
             <span>Train Smart</span>
           </div>
           <div className="marquee" >
-            <span>Train Smart</span>
+            <span>↪</span>
           </div>
           <div className="marquee" >
             <span>Train Smart</span>
           </div>
           <div className="marquee" >
-            <span>Train Smart</span>
+            <span>↩</span>
           </div>
           <div className="marquee" >
             <span>Train Smart</span>
           </div>
-
+          <div className="marquee" >
+            <span>↪</span>
+          </div>
+          <div className="marquee" >
+            <span>Train Smart</span>
+          </div>
+          <div className="marquee" >
+            <span>↩</span>
+          </div>
+          <div className="marquee" >
+            <span>Train Smart</span>
+          </div>
+          <div className="marquee" >
+            <span>↪</span>
+          </div>
+          <div className="marquee" >
+            <span>Train Smart</span>
+          </div>
             </div>
+        </div>
+          
           
         </div>
+        <section className='sec-section'>
+          <div>
+          <h2>Programs to Transform You</h2>
+          <p>Discover workouts, meal plans, and more!</p>
+          </div>
+        </section>
       </div>
     </div>
   );
