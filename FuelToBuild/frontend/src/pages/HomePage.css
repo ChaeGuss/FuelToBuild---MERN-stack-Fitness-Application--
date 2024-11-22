@@ -24,15 +24,19 @@
   
   /* Text styling */
   .text-container {
-    position: relative;
+    position: absolute;
     opacity: 0; /* Start hidden */
-    animation: fadeInMoveUp 2s ease-out 1.5s forwards; /* Delayed animation */
+    animation: fadeInMoveUp 1.2s ease-out 1.5s forwards; /* Delayed animation */
     text-align: center;
   }
   
   .text-container h1 {
-    font-size: 2.5rem;
+    font-size: 5rem;
     margin: 0;
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #222831;
   }
   
   .text-container p {
@@ -56,11 +60,38 @@
   @keyframes fadeInMoveUp {
     0% {
       opacity: 0;
-      transform: translateY(20px); /* Start slightly below */
+      transform: translateY(0); /* Start slightly below */
     }
     100% {
       opacity: 1;
-      transform: translateY(0); /* Move up to center */
+      transform: translateY(-70px); /* Move up to center */
     }
   }
   
+  /* Marquee container */
+.marquee-container {
+  position: absolute;
+  width: 100%;
+  overflow: hidden; /* Prevent scrolling elements from spilling out */
+  background: #f8f8f8; 
+  padding: 1rem 0; 
+  flex-direction: row;
+  flex: auto;
+}
+
+/* Marquee text */
+.marquee {
+  font-size: 1.5rem; /* Adjust text size */
+  font-weight: bold;
+  color: #333; /* Text color */
+}
+
+.marquee-part{
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 0 4px;
+  gap: 2rem; 
+  white-space: nowrap; 
+}
+

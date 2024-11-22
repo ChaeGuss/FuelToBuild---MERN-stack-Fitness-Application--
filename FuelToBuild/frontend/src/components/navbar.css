@@ -8,6 +8,7 @@
     background-color: #333;
     color: #fff;
     width: 55%;
+    margin-top: 20px;
   }
   
 .navbar-container {
@@ -30,6 +31,9 @@
   .navbar-links a {
     color: #fff;
     text-decoration: none;
+    font-family: "Merriweather Sans", sans-serif;
+  font-optical-sizing: auto;
+  
   }
   
   .navbar-links a:hover {
