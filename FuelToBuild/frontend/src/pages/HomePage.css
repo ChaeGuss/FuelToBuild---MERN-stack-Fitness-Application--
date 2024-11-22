@@ -1,6 +1,6 @@
 /* Container for the homepage */
-.screen {
-  border: 5px solid #222831;
+.body{
+  margin: 0;
 }
 .landing {
     display: flex;
@@ -16,8 +16,10 @@
   /* Image styling */
   .image-container {
     position: relative;
-    opacity: 0; /* Start hidden */
-    animation: moveDown 2s ease-out forwards; /* Move down animation */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
     margin-top: -70px;
   }
   
@@ -25,6 +27,7 @@
     max-width: 100%;
     height: auto;
     border-radius: 10px;
+    display: block;
   }
   
   /* Text styling */
@@ -42,6 +45,7 @@
     font-weight: 400;
     font-style: normal;
     color: #222831;
+    
   }
   
   
@@ -65,10 +69,38 @@
     }
     100% {
       opacity: 1;
-      transform: translateY(-85px); /* Move up to center */
+      transform: translateY(-100px); /* Move up to center */
     }
   }
   
+  .cta-button {
+    position: absolute;
+    bottom: 35%; 
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-family: "Russo One", sans-serif;
+    color: #222831;
+    background-color: #7dff32;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  /* Hover effects */
+  .cta-button:hover {
+    background-color: #222831; 
+    color: white;
+    transform: translateY(-2px);
+  }
+  
+  /* Focus effects */
+  .cta-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(62, 142, 65, 0.5);
+  }
+
   /* Marquee container */
 .marquee-container {
   position: absolute;

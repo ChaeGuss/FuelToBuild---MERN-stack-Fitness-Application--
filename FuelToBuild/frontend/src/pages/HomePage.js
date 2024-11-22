@@ -27,7 +27,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div className='screen'>
+    <div className='body'>
       <Navbar />
       <div className="homepage-container">
         <div className='landing'>
@@ -36,6 +36,7 @@ const HomePage = () => {
               src={img1} // Replace with the path to your image
               alt="Fitness"
             />
+            <button className="cta-button">Get Started</button>
           </div>
           <div className="text-container">
             <h1>Fuel To Build</h1>
