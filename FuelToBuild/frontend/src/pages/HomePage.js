@@ -7,6 +7,9 @@ import { gsap } from 'gsap';
 
 const HomePage = () => {
   const marqueeRef = useRef(null);
+  const textRef = useRef(null); 
+  const imgRef = useRef(null);
+  const btnRef = useRef(null);
 
   useEffect(() => {
     const marqueeElements = marqueeRef.current.children;
@@ -23,6 +26,41 @@ const HomePage = () => {
       },
     }).totalProgress(0.5);
     
+    gsap.fromTo(
+      textRef.current,
+      { y: '10%', opacity: 0 },
+      {
+        y: '-110%',
+        opacity: 1,
+        duration: 1.5,
+        ease: 'power4.out',
+        delay: 0.8,
+      }
+    );
+
+    gsap.fromTo(
+      imgRef.current,
+      { y: '-10%', opacity: 0 },
+      {
+        y: '0%',
+        opacity: 1,
+        duration: 1.5,
+        ease: 'power4.out',
+        delay: 0.5,
+      }
+    );
+
+    gsap.fromTo(
+      btnRef.current,
+      { x: '-30%', opacity: 0 },
+      {
+        x: '0%',
+        opacity: 1,
+        duration: 1.5,
+        ease: 'power4.out',
+        delay: 0.1,
+      }
+    );
 
   }, []);
 
@@ -35,11 +73,12 @@ const HomePage = () => {
             <img
               src={img1} // Replace with the path to your image
               alt="Fitness"
+              ref={imgRef}
             />
-            <button className="cta-button">Get Started</button>
+            <button className="cta-button" ref={btnRef}>Get Started</button>
           </div>
           <div className="text-container">
-            <h1>Fuel To Build</h1>
+            <h1  ref={textRef}>Fuel To Build</h1>
           </div>
           <div className="marquee-container"  ref={marqueeRef}>
             <div className='marquee-part'>
@@ -130,7 +169,11 @@ const HomePage = () => {
           </div>
         </section>
       </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      
     </div>
+
+    
   );
 };
 

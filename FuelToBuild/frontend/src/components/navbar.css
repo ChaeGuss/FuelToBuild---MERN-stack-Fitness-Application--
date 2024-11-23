@@ -11,6 +11,7 @@
     background-color: #333;
     color: #fff;
     width: 45%;
+    margin-top: 20px;
   }
   
 .navbar-container {
@@ -40,6 +41,6 @@
   }
   
   .navbar-links a:hover {
-    color: #ff5722;
+    color: #7dff32;
   }
   

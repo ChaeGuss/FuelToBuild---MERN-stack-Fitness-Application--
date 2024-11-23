@@ -1,11 +1,30 @@
 // Navbar.js
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './navbar.css'; // We'll style the navbar with this file
+import { gsap } from 'gsap';
 
 const Navbar = () => {
+const navRef = useRef(null);
+
+useEffect(() => {
+  
+  gsap.fromTo(
+    navRef.current,
+    { y: '-30%', opacity: 1 },
+    {
+      y: '0%',
+      opacity: 1,
+      duration: 1.5,
+      ease: 'power4.out',
+      delay: 1.5,
+    }
+  );
+
+}, []);
+
   return (
-    <nav className="navbar-container">
+    <nav className="navbar-container" ref={navRef}>
         <nav className='navbar'> 
             <div className="navbar-logo">
                 <h2>FuelToBuild</h2>
